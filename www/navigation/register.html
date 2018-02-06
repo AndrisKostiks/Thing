@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./../css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<content>
+		<nav>
+      <a href="./../index.html" class="button">Home</a>
+      <a href="./news.html" class="button">News</a>
+      <a href="./gallery.html" class="button">Gallery</a>
+      <a href="./contacts.html" class="button">Contacts</a>
+      <a href="./map.html" class="button">Map</a>
+		</nav>
+		<div class="mainWrapper">
+			<main>
+        <p> In order to proceed you must agree to the(non-existent) user License.</p>
+        <br>
+      <form action="" name="formA" id="other_thing">
+         <input type="radio" name="info" value="yes"> Agree
+         <input type="radio" name="info" value="no"> Decline
+      </form>
+      <p style="opacity:0;" id="tkst"> YOU HAVE AGREEED!</p>
+      <form action="/action_page.php" id="thing">
+       <label for="name">First name:</label><br>
+       <input type="text" name="name" value="Mickey"><br>
+       <label for="last">Last name:</label><br>
+       <input type="text" name="last" value="Mouse"><br><br>
+       <input type="submit" value="Submit">
+      </form>
+			</main>
+		</div>
+		<footer>
+      <script type="text/javascript">
+         function show(){
+           document.getElementById('thing').style.opacity = 1;
+           document.getElementById('tkst').style.opacity = 1;
+         }
+         function hide(){
+           document.getElementById('other_thing').style.opacity = 0;
+         }
+         var radios = document.forms["formA"].elements["info"];
+          for(var i = 0, max = radios.length; i < max; i++) {
+              radios[i].onclick = function() {
+                  if(this.value = 'yes'){
+                    show();
+                    hide();
+                  }
+              }
+          }
+
+
+      </script>
+			A footer
+		</footer>
+	</content>
+</body>
+</html>

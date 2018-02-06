@@ -1,0 +1,249 @@
+html {
+
+}
+body{
+  text-align: center;
+}
+content{
+  display:flex;
+  flex-wrap: wrap;
+  background-color: red;
+  height: 100vh;
+  overflow:scroll;
+}
+content > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+.button{
+  padding: 4vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  align-self: center;
+  text-align: center;
+}
+nav{
+  background-color: orange;
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+nav > *{
+  flex: 1;
+  margin-right: 3vw;
+  margin-left: 3vw;
+  background-color: green;
+}
+.mainWrapper{
+  display: flex;
+  order:2;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  /* margin-bottom: 2vh;
+  margin-top: 2vh; */
+  flex: 1;
+}
+#side1{
+  order: 1;
+  background-color: #ccc;
+}
+#side1 > *{
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+#side2{
+  background-color: #ccc;
+  order:3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.sidebar{
+  flex:1;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  min-height: 70vh;
+
+}
+.sidebar > * {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  flex: 1;
+}
+#thing{
+   transition: width 2s linear 1s;
+   opacity: 0;
+}
+.form{
+  min-width: 3vw;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.form > *{
+  flex: 1;
+}
+.formLabel{
+  flex: 1;
+}
+.formInput{
+  flex:2;
+}
+.formText{
+  flex:1;
+  color:#111;
+}
+main{
+  background-color: pink;
+  order: 2;
+  flex:5;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 70vh;
+}
+main > *{
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  flex: 1 100%;
+}
+footer{
+  background-color: yellow;
+  order: 3;
+  align-self: flex-end;
+}
+.mainBar{
+  background-color: gold;
+  order: 2;
+  flex: 3;
+
+}
+.leftBar{
+  background-color: #e3e3e3;
+  order: 1;
+  flex:1;
+}
+.rightBar{
+  background-color: magenta;
+  order: 3;
+  flex: 1;
+}
+.bottomBar{
+  order:4;
+  flex: auto;
+  background-color: rgb(222, 29, 207);
+}
+@media  (max-width: 800px) {
+  /* We tell both sidebars to share a row */
+  main{justify-content: space-around;}
+  .mainWrapper{justify-content: space-around;}
+  nav{flex-wrap: wrap;
+    }
+  nav>*{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  #map{
+    height: 45vh;
+  }
+}
+@media  (max-width: 600px) {
+  /* We tell both sidebars to share a row */
+  main{flex-direction:column;}
+  nav{flex-wrap: wrap;
+    }
+  nav>*{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  .mainWrapper{flex-direction:column;}
+  #map{
+    flex-grow: 5;
+    min-height: 400px;
+    height: 45vh;
+  }
+}
+#map{
+  flex:1;
+  height: 45vh;
+  background-color: rgb(31, 217, 146);
+}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 8vw;
+    background: #1abc9c;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
