@@ -1,0 +1,11 @@
+.navLinks{
+  display: flex;
+}
+.navLink{
+  flex:1;
+  text-align: center;
+}
+#logoPicture{
+  width: 5vw;
+  height: 10vh;
+}
